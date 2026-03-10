@@ -1,6 +1,6 @@
 <html>
     <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
     <body>
     안녕하세요 <b>크림빵</b>입니다
@@ -31,4 +31,26 @@
             <br>
             여러분<marquee direction="down">크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵 크림빵</marquee direction="down">드세요
             </body>
+            <style>
+                .diagonal-marquee {
+                  width: 1000px;
+                  height: 1000px;
+                  border: 12px solid rgb(255, 0, 0);
+                  overflow: hidden;
+                  position: relative;
+                }
+                .content {
+                  position: absolute;
+                  white-space: nowrap;
+                  animation: diagonalMove 3s linear infinite;
+                }
+                @keyframes diagonalMove {
+                  0% { transform: translate(0%, 100%); }
+                  100% { transform: translate(1000px, 1000px); }
+                }
+                </style>
+                
+                <div class="diagonal-marquee">
+                  <div class="content">크림빵 크림빵 크림빵 크림빵 크림빵</div>
+                </div>
 </html>
